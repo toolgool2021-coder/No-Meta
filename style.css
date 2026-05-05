@@ -399,45 +399,103 @@ body {
 
 /* КОНТАКТЫ */
 .contact-section {
-    text-align: center;
-    padding: 40px 30px;
-    background-color: #1a1a1a;
-    border: 1px solid #333;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    border: 2px solid #00ffff;
     border-radius: 8px;
+    padding: 50px 30px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
+}
+
+.contact-links-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .contact-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 12px 25px;
+    justify-content: center;
+    gap: 12px;
+    min-width: 180px;
+    padding: 16px 35px;
     background-color: #2a2a2a;
     color: #ffffff;
-    border: 1px solid #333;
+    border: 2px solid #333;
     border-radius: 8px;
     text-decoration: none;
-    margin: 0 10px;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
-    font-weight: 500;
+    transition: all 0.4s ease;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-.contact-link:hover {
-    border-color: #00ffff;
-    color: #00ffff;
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+.contact-link i {
+    font-size: 1.2rem;
+    transition: all 0.4s ease;
+}
+
+/* TELEGRAM ССЫЛКА */
+.contact-link.telegram-link {
+    border-color: #0088cc;
 }
 
 .contact-link.telegram-link:hover {
     border-color: #0088cc;
-    color: #0088cc;
-    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.1);
+    color: #ffffff;
+    background-color: #0088cc;
+    box-shadow: 
+        0 0 20px rgba(0, 136, 204, 0.5),
+        0 0 40px rgba(0, 136, 204, 0.3),
+        inset 0 0 20px rgba(0, 136, 204, 0.2);
+    transform: translateY(-4px) scale(1.05);
+}
+
+.contact-link.telegram-link:hover i {
+    animation: rotateTelegram 0.6s ease;
+}
+
+@keyframes rotateTelegram {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* EMAIL ССЫЛКА */
+.contact-link.mail-link {
+    border-color: #ff4444;
 }
 
 .contact-link.mail-link:hover {
     border-color: #ff4444;
-    color: #ff4444;
-    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.1);
+    color: #ffffff;
+    background-color: #ff4444;
+    box-shadow: 
+        0 0 20px rgba(255, 68, 68, 0.5),
+        0 0 40px rgba(255, 68, 68, 0.3),
+        inset 0 0 20px rgba(255, 68, 68, 0.2);
+    transform: translateY(-4px) scale(1.05);
+}
+
+.contact-link.mail-link:hover i {
+    animation: scaleMail 0.4s ease;
+}
+
+@keyframes scaleMail {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* АДАПТИВНОСТЬ */
@@ -471,8 +529,13 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .contact-links-wrapper {
+        gap: 15px;
+    }
+
     .contact-link {
-        margin: 5px;
+        min-width: 160px;
+        padding: 14px 25px;
     }
 }
 
@@ -493,10 +556,18 @@ body {
         font-size: 1.4rem;
     }
 
+    .contact-section {
+        padding: 30px 20px;
+    }
+
+    .contact-links-wrapper {
+        flex-direction: column;
+        gap: 12px;
+    }
+
     .contact-link {
-        display: flex;
-        justify-content: center;
-        width: calc(50% - 10px);
+        width: 100%;
+        min-width: unset;
     }
 
     .examples-grid {
