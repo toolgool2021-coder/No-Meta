@@ -1,246 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOmetaPLS — правила корректного общения</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0e14">
+  <meta name="description" content="NOmetaPLS — короткое руководство о том, как задавать вопросы по существу и получать полезные ответы без лишних сообщений.">
+  <meta property="og:title" content="NOmetaPLS — меньше вступлений, больше смысла">
+  <meta property="og:description" content="Искусство задавать вопросы сразу по делу. Примеры, рекомендации и практика.">
+  <meta property="og:type" content="website">
+  <title>NOmetaPLS — общение по делу</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-<canvas id="snowCanvas"></canvas>
-
-<div class="container">
-
-    <!-- ИНФОРМАЦИОННЫЙ БЛОК -->
-    <div class="info-block">
-        <div class="info-header">
-            <span class="info-badge">[ ВАЖНО ]</span>
-        </div>
-        <p class="info-description">
-            Правила корректного общения без мета-вопросов
-        </p>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="brand" href="#top" aria-label="NOmetaPLS — наверх"><span class="brand-icon" aria-hidden="true"><span class="brand-icon-dot"></span><span class="brand-icon-line"></span></span><span>no<span class="brand-accent">meta</span><span class="brand-muted">pls.</span></span></a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#about">Суть</a><a href="#examples">Примеры</a><a href="#principles">Принципы</a><a href="#faq">Вопросы</a>
+      </nav>
+      <a class="nav-cta" href="#examples">Посмотреть примеры <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
+    <nav class="mobile-nav" id="mobileMenu" aria-label="Мобильная навигация" hidden><a href="#about">Суть</a><a href="#examples">Примеры</a><a href="#principles">Принципы</a><a href="#faq">Вопросы</a></nav>
+  </header>
 
-    <!-- ГЛАВНЫЙ ЗАГОЛОВОК -->
-    <div class="main-header">
-        <h1 class="project-title">NOmetaPLS</h1>
-        <p class="project-subtitle">Правила корректного общения</p>
-    </div>
-
-    <!-- ОБЩАЯ ИДЕЯ -->
-    <div class="section">
-        <h2>📌 Общая идея</h2>
-        <p>В рамках данного проекта под мета-вопросами понимаются сообщения, которые не относятся к сути обсуждения и не несут практической ценности для диалога.</p>
-        <p>Основная цель этой страницы — объяснить, почему подобные вопросы нежелательны и как формулировать сообщения корректно.</p>
-    </div>
-
-    <!-- ЧТО ТАКОЕ МЕТА-ВОПРОСЫ -->
-    <div class="section">
-        <h2>❓ Что такое мета-вопросы</h2>
-        <p>Мета-вопросы — это вопросы не по теме общения, а о самом факте общения, системе или очевидных вещах.</p>
-        
-        <h3 class="subsection-title">Примеры мета-вопросов:</h3>
-        <div class="examples-grid">
-            <div class="example-bad">
-                <p>«Ты бот?»</p>
-            </div>
-            <div class="example-bad">
-                <p>«Ты меня видишь / читаешь?»</p>
-            </div>
-            <div class="example-bad">
-                <p>«Ты онлайн?»</p>
-            </div>
-            <div class="example-bad">
-                <p>«Можно задать вопрос?»</p>
-            </div>
-            <div class="example-bad">
-                <p>«Ты отвечаешь?»</p>
-            </div>
-            <div class="example-bad">
-                <p>«Это работает?»</p>
-            </div>
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="signal-dot"></span> КУЛЬТУРА ЦИФРОВОГО ОБЩЕНИЯ <span class="eyebrow-divider"></span> МИНИ-ГАЙД</div>
+        <h1>Меньше <span class="muted-word">лишнего.</span><br>Больше <span class="highlight-word">смысла<span class="highlight-stop">.</span></span></h1>
+        <p class="hero-description">Хороший вопрос начинается с сути, а не с «можно спросить?». Узнай, как писать понятнее, экономить время и получать ответы быстрее.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#examples">Смотреть примеры <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="#about">Узнать подробнее <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-proof"><div class="proof-icon" aria-hidden="true">↗</div><span>Один понятный вопрос лучше пяти уточняющих сообщений.</span></div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Пример короткой и ясной переписки">
+        <div class="visual-light" aria-hidden="true"></div>
+        <div class="chat-window">
+          <div class="chat-top"><span class="chat-avatar" aria-hidden="true">n.</span><div><strong>Пример диалога</strong><span class="chat-status"><i></i> Как писать эффективнее</span></div><span class="chat-menu" aria-hidden="true">•••</span></div>
+          <div class="chat-body">
+            <div class="chat-date">СЕГОДНЯ</div>
+            <div class="chat-label label-bad">НЕУДАЧНЫЙ ПОДХОД</div>
+            <div class="message-group"><div class="message old-message">Привет, ты тут?</div><div class="message old-message">Можно задать вопрос?</div><span class="message-note"><span class="note-cross">×</span> Два сообщения, но задача всё ещё неизвестна</span></div>
+            <div class="chat-separator"></div>
+            <div class="chat-label label-good">ЛУЧШИЙ ВАРИАНТ</div>
+            <div class="message-group"><div class="message new-message">Привет! При запуске сайта получаю ошибку 404. Подскажи, что проверить в первую очередь?</div><span class="message-note"><span class="note-check">✓</span> Проблема и запрос понятны сразу</span></div>
+          </div>
+          <div class="chat-bottom"><span>Напишите сообщение...</span><span class="send-symbol" aria-hidden="true">↑</span></div>
         </div>
-        <p class="note-text">Подобные сообщения не продвигают диалог и не помогают решить задачу.</p>
-    </div>
+        <span class="floating-chip chip-top" aria-hidden="true">✳ <span>Больше ясности</span></span>
+        <span class="floating-chip chip-bottom" aria-hidden="true"><span class="sparkle">✦</span> Меньше сообщений</span>
+      </div>
+    </section>
+    <div class="shell"><div class="trust-line"><span>ПОНЯТНО</span><span class="trust-stroke"></span><span>КРАТКО</span><span class="trust-stroke"></span><span>ПО СУЩЕСТВУ</span><span class="trust-stroke"></span><span>УВАЖИТЕЛЬНО</span></div></div>
 
-    <!-- ПОЧЕМУ ЭТО ПРОБЛЕМА -->
-    <div class="section">
-        <h2>⚠️ Почему это проблема</h2>
-        <div class="problems-list">
-            <div class="problem-item">
-                <div class="problem-number">1</div>
-                <div class="problem-content">
-                    <h3>Отсутствие смысловой нагрузки</h3>
-                    <p>Мета-вопросы не содержат полезной информации и не требуют содержательного ответа.</p>
-                </div>
-            </div>
-            <div class="problem-item">
-                <div class="problem-number">2</div>
-                <div class="problem-content">
-                    <h3>Замедление коммуникации</h3>
-                    <p>Они создают лишний этап в диалоге вместо перехода сразу к сути вопроса.</p>
-                </div>
-            </div>
-            <div class="problem-item">
-                <div class="problem-number">3</div>
-                <div class="problem-content">
-                    <h3>Снижение качества общения</h3>
-                    <p>Частое использование таких фраз формирует ощущение несерьёзного или неструктурированного подхода к диалогу.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <section class="content-section shell" id="about">
+      <div class="section-heading reveal"><div class="kicker"><span class="kicker-number">01</span> / О ЧЁМ ЭТО</div><h2>Что такое <span class="text-gradient">мета-вопросы?</span></h2><p>Это сообщения, в которых спрашивают о возможности задать вопрос — вместо того, чтобы задать сам вопрос. Часто они создают лишнюю паузу.</p></div>
+      <div class="about-grid">
+        <article class="surface about-main reveal"><div class="card-top"><span class="small-pill">ОПРЕДЕЛЕНИЕ</span><span class="card-symbol" aria-hidden="true">↗</span></div><h3>Не спрашивай, можно ли спросить. <span>Просто спрашивай.</span></h3><p>Вместо отдельного сообщения «Ты разбираешься в коде?» сразу опиши задачу. Собеседник сам поймёт, сможет ли помочь.</p><div class="about-quote"><span aria-hidden="true">“</span>Суть вопроса важнее вступления.</div></article>
+        <article class="surface about-side reveal"><div class="side-icon" aria-hidden="true">◎</div><h3>Без лишних шагов</h3><p>Указывай вопрос сразу — так собеседник сможет ответить, когда будет готов.</p><div class="mini-flow"><span>Проблема</span><b>→</b><span>Контекст</span><b>→</b><span>Вопрос</span></div></article>
+      </div>
+    </section>
 
-    <!-- СРАВНЕНИЕ -->
-    <div class="section">
-        <h2>🔄 Сравнение: как не стоит и как стоит писать</h2>
-        
-        <div class="comparison-example">
-            <div class="comparison-bad">
-                <h3>❌ Некорректно:</h3>
-                <p class="example-text">"Ты разбираешься в этом?"</p>
-            </div>
-            <div class="comparison-good">
-                <h3>✅ Корректно:</h3>
-                <p class="example-text">"Хотел спросить 1"</p>
-            </div>
-        </div>
+    <section class="content-section shell" id="examples">
+      <div class="section-heading reveal"><div class="kicker"><span class="kicker-number">02</span> / НА ПРАКТИКЕ</div><h2>Одна мысль. <span class="text-gradient">Два подхода.</span></h2><p>Сравни формулировки: слева — лишнее вступление, справа — сообщение, на которое уже можно ответить.</p></div>
+      <div class="examples-board reveal">
+        <div class="board-header"><div><span class="board-bullet"></span><strong>Сравнение сообщений</strong></div><span class="board-counter" id="exampleCounter">01 / 04</span></div>
+        <div class="board-grid"><div class="comparison-panel panel-before"><div class="comparison-heading"><span class="panel-tag before-tag">✕ &nbsp; НЕ СТОИТ</span><span class="panel-caption">Без конкретики</span></div><div class="quote-mark" aria-hidden="true">“</div><p id="beforeText">Ты разбираешься в сайтах?</p><div class="panel-bottom"><span class="state-dot red-dot"></span><span>Собеседник не знает, что требуется</span></div></div><div class="comparison-panel panel-after"><div class="comparison-heading"><span class="panel-tag after-tag">✓ &nbsp; ЛУЧШЕ ТАК</span><span class="panel-caption">Суть в первом сообщении</span></div><div class="quote-mark" aria-hidden="true">“</div><p id="afterText">Привет! На сайте не открывается главная страница. Как проверить причину ошибки 404?</p><div class="panel-bottom"><span class="state-dot green-dot"></span><span>Можно сразу перейти к решению</span></div></div></div>
+        <div class="board-footer"><span>Листай реальные примеры</span><div class="example-controls"><button id="prevExample" type="button" aria-label="Предыдущий пример">←</button><button id="nextExample" type="button" aria-label="Следующий пример">→</button></div></div>
+      </div>
+      <div class="phrase-strip reveal"><span class="phrase-title">Частые фразы без контекста:</span><span>«Ты онлайн?»</span><span>«Можно спросить?»</span><span>«Ответь»</span><span>«Ты здесь?»</span></div>
+    </section>
 
-        <div class="comparison-example">
-            <div class="comparison-bad">
-                <h3>❌ Некорректно:</h3>
-                <p class="example-text">"Можно вопрос?"</p>
-            </div>
-            <div class="comparison-good">
-                <h3>✅ Корректно:</h3>
-                <p class="example-text">"Хотел спросить 2"</p>
-            </div>
-        </div>
+    <section class="content-section shell" id="principles">
+      <div class="section-heading reveal"><div class="kicker"><span class="kicker-number">03</span> / ПОЛЕЗНЫЕ ПРИВЫЧКИ</div><h2>Принципы <span class="text-gradient">ясного диалога.</span></h2><p>Не нужно писать сухо или резко. Достаточно сделать сообщение понятным и уважительным.</p></div>
+      <div class="principles-grid">
+        <article class="principle-card reveal"><span class="principle-index">01 /</span><div class="principle-icon" aria-hidden="true">↗</div><h3>Сразу к сути</h3><p>Начни с того, что хочешь узнать или решить. Вежливое приветствие при этом вполне уместно.</p></article>
+        <article class="principle-card reveal"><span class="principle-index">02 /</span><div class="principle-icon" aria-hidden="true">≡</div><h3>Добавь контекст</h3><p>Опиши условия, шаги, ошибки или детали, которые помогут дать точный ответ.</p></article>
+        <article class="principle-card reveal"><span class="principle-index">03 /</span><div class="principle-icon" aria-hidden="true">◎</div><h3>Будь конкретен</h3><p>Вместо «не работает» уточни, что именно происходит и какого результата ожидаешь.</p></article>
+        <article class="principle-card reveal"><span class="principle-index">04 /</span><div class="principle-icon" aria-hidden="true">♡</div><h3>Уважай время</h3><p>Одно содержательное сообщение удобнее нескольких проверок присутствия в чате.</p></article>
+      </div>
+      <div class="formula-card reveal"><div><span class="small-pill">ПРОСТАЯ ФОРМУЛА</span><h3>Приветствие <span>+</span> Контекст <span>+</span> Чёткий вопрос</h3><p>«Привет! После обновления страницы пропали стили. CSS подключён через отдельный файл. Что проверить?»</p></div><button type="button" class="copy-button" id="copyExample" aria-label="Скопировать пример"><span id="copyLabel">Скопировать пример</span><span aria-hidden="true">⧉</span></button></div>
+    </section>
 
-        <div class="comparison-example">
-            <div class="comparison-bad">
-                <h3>❌ Некорректно:</h3>
-                <p class="example-text">"Ты тут?"</p>
-            </div>
-            <div class="comparison-good">
-                <h3>✅ Корректно:</h3>
-                <p class="example-text">"Хотел спросить 3"</p>
-            </div>
-        </div>
-    </div>
+    <section class="content-section shell" id="faq">
+      <div class="section-heading reveal"><div class="kicker"><span class="kicker-number">04</span> / НЮАНСЫ</div><h2>Но бывают <span class="text-gradient">исключения.</span></h2><p>Это рекомендация, а не запрет на обычное человеческое общение. Контекст всегда важен.</p></div>
+      <div class="faq-list reveal">
+        <details><summary>Разве «можно спросить?» — это невежливо?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Нет. Сама фраза вежливая, но в переписке часто удобнее сразу написать вопрос. Так другой человек может ответить без лишних сообщений.</p></details>
+        <details><summary>Когда уточнение присутствия действительно нужно?<span class="faq-plus" aria-hidden="true">+</span></summary><p>При срочном созвоне, техническом сбое, проверке связи или если важна немедленная реакция собеседника.</p></details>
+        <details><summary>Можно ли сначала поздороваться?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Конечно. Например: «Привет! Есть проблема с авторизацией, получаю ошибку 403. Как её исправить?» Здесь и приветствие, и суть находятся в одном сообщении.</p></details>
+        <details><summary>Это правило распространяется на дружеское общение?<span class="faq-plus" aria-hidden="true">+</span></summary><p>Нет строгого правила для всех ситуаций. В дружеском разговоре вступление само по себе может быть частью общения. Совет особенно полезен в рабочих, технических и информационных чатах.</p></details>
+      </div>
+    </section>
 
-    <!-- ЛИШНИЕ ФРАЗЫ -->
-    <div class="section">
-        <h2>🚫 Распространённые лишние фразы</h2>
-        <p>Рекомендуется избегать следующих формулировок:</p>
-        
-        <div class="banned-phrases">
-            <div class="phrase-item">«Можно спросить?»</div>
-            <div class="phrase-item">«Ты онлайн?»</div>
-            <div class="phrase-item">«Ответь»</div>
-            <div class="phrase-item">«Срочно»</div>
-            <div class="phrase-item">«Пожалуйста ответь»</div>
-            <div class="phrase-item">«Ты живой?»</div>
-        </div>
-
-        <p class="note-text">Они не улучшают коммуникацию и не ускоряют получение ответа.</p>
-    </div>
-
-    <!-- РЕКОМЕНДАЦИИ -->
-    <div class="section">
-        <h2>✨ Рекомендации по корректному общению</h2>
-        <p>Для эффективного взаимодействия:</p>
-        
-        <div class="recommendations-list">
-            <div class="rec-item">
-                <div class="rec-icon">📝</div>
-                <div class="rec-content">
-                    <h3>Формулируйте вопрос сразу по существу</h3>
-                    <p>Не используйте вводные фразы</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">🎯</div>
-                <div class="rec-content">
-                    <h3>Избегайте вводных и проверочных сообщений</h3>
-                    <p>Переходите сразу к делу</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">🔍</div>
-                <div class="rec-content">
-                    <h3>Указывайте конкретную проблему или задачу</h3>
-                    <p>Будьте максимально ясны</p>
-                </div>
-            </div>
-            <div class="rec-item">
-                <div class="rec-icon">📌</div>
-                <div class="rec-content">
-                    <h3>При необходимости добавляйте контекст</h3>
-                    <p>Предоставьте всю нужную информацию сразу</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="good-example">
-            <h3>✅ Пример корректного вопроса:</h3>
-            <p>"Возникает ошибка при запуске сервера. Код ошибки: 500. Какие возможные причины и решения?"</p>
-        </div>
-    </div>
-
-    <!-- ИСКЛЮЧЕНИЯ -->
-    <div class="section">
-        <h2>⚡ Допустимые исключения</h2>
-        <p>Использование мета-вопросов может быть оправдано в редких случаях:</p>
-        
-        <ul class="exceptions-list">
-            <li>при технических сбоях</li>
-            <li>при длительном отсутствии ответа</li>
-            <li>при необходимости уточнить статус системы</li>
-        </ul>
-
-        <p class="note-text">Однако даже в этих ситуациях рекомендуется минимизировать подобные формулировки.</p>
-    </div>
-
-    <!-- ЗАКЛЮЧЕНИЕ -->
-    <div class="section conclusion-section">
-        <h2>🎯 Заключение</h2>
-        <p>Эффективная коммуникация строится на ясности и конкретике.</p>
-        
-        <div class="conclusion-benefits">
-            <div class="benefit">
-                <i class="fas fa-tachometer-alt"></i>
-                <p>Ускоряет диалог</p>
-            </div>
-            <div class="benefit">
-                <i class="fas fa-star"></i>
-                <p>Повышает качество ответов</p>
-            </div>
-            <div class="benefit">
-                <i class="fas fa-briefcase"></i>
-                <p>Делает взаимодействие более профессиональным</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- КОНТАКТЫ -->
-    <div class="contact-section">
-        <div class="contact-links-wrapper">
-            <a href="https://t.me/Toolgool" target="_blank" class="contact-link telegram-link">
-                <i class="fab fa-telegram"></i>
-                <span>Telegram</span>
-            </a>
-            <a href="mailto:Toolgool2021@gmail.com" class="contact-link mail-link">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
-        </div>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+    <section class="bottom-cta shell reveal"><div class="bottom-glow" aria-hidden="true"></div><span class="small-pill">ГЛАВНАЯ МЫСЛЬ</span><h2>Пиши так, чтобы тебя <span>поняли с первого раза.</span></h2><p>Ясность — это забота о времени и своём, и собеседника.</p><a class="button button-light" href="#top">Вернуться наверх <span aria-hidden="true">↑</span></a></section>
+  </main>
+  <footer class="site-footer shell"><div class="footer-left"><a class="brand" href="#top"><span class="brand-icon" aria-hidden="true"><span class="brand-icon-dot"></span><span class="brand-icon-line"></span></span><span>no<span class="brand-accent">meta</span><span class="brand-muted">pls.</span></span></a><p>Меньше лишнего. Больше смысла.</p></div><div class="footer-right"><a href="https://t.me/Toolgool" target="_blank" rel="noopener noreferrer">Telegram ↗</a><a href="mailto:Toolgool2021@gmail.com">Email ↗</a><span>© <span id="year">2026</span> NOmetaPLS</span></div></footer>
 </body>
-            </html>
+</html>
